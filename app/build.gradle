@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.example.computeraccount.newmovieratings"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes.each {
+        it.buildConfigField 'String', 'OPEN_MOVIE_DATABASE_API_KEY', "\"xxxxxxxxxxxxxxx\""
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'com.android.support:support-v4:26.1.0'
+}
+dependencies {
+    compile 'com.google.firebase:firebase-appindexing:11.8.0'
+}
