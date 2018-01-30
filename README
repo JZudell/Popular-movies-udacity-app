@@ -1,2 +1,2 @@
-This is an app showing poupar movies from TMdb (The Movie database). An API key is needed.
+This is an app showing popular movies from TMdb (The Movie database). An API key is needed.
 The api key goes in the App build.gradle file replacing 'xxxxxxxx'
